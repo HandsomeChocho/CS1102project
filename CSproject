@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compression Algorithms</title>
+</head>
+<body>
+    <header>
+        <h1>Understanding Image Compression Algorithms</h1>
+        <p>An in-depth look at how different algorithms compress and optimize images.</p>
+    </header>
+    <nav>
+        <!-- Navigation Links -->
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#algorithms">Algorithms</a></li>
+            <li><a href="#comparisons">Comparisons</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Exploring the need for image compression and the basic principles behind it.</p>
+    </section>
+    <section id="algorithms">
+        <h2>Image Compression Algorithms</h2>
+        <article id="jpeg">
+            <h3>JPEG</h3>
+            <p>Details about the JPEG compression algorithm, including how it works and when it's best used.</p>
+            <p> This is the information about JPEG compression</p>
+        </article>
+        <article id="png">
+            <h3>PNG</h3>
+            <p>Insights into the PNG compression technique, its benefits, and ideal use cases.</p>
+        </article>
+        <!-- Add more algorithms as necessary -->
+    </section>
+    <section id="comparisons">
+        <h2>Algorithm Comparisons</h2>
+        <p>A detailed comparison of various image compression algorithms, including visual examples, efficiency, and use cases.</p>
+    </section>
+    <footer>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Information about the creators of the website and the purpose behind it.</p>
+        </section>
+        <p>&copy; 2024 Image Compression Algorithms</p>
+    </footer>
+</body>
+</html>
