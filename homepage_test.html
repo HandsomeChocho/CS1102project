@@ -4,34 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Compression Algorithms</title>
+    <link rel="stylesheet" href="homepage_style.css">
 </head>
 <body>
     <header>
-        <h1>HAHHAAHAHAHAHAHAHAUnderstanding Image Compression Algorithms</h1>
+        <h1> Image Compression Algorithms</h1>
         <p>An in-depth look at how different algorithms compress and optimize images.</p>
     </header>
     <nav>
-        <!-- Navigation Links -->
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#algorithms">Algorithms</a></li>
-            <li><a href="#comparisons">Comparisons</a></li>
-            <li><a href="#about">About Us</a></li>
-        </ul>
+        <table>
+            <tr>
+                <th><a href="homepage_test.html">Introduction</a></th>
+                <th><a href="lossy.html">Lossy</a></th>
+                <th><a href="#comparisons">Comparisons</a></th>
+                <th><a href="#about">About Us</a></li></th>
+            </tr>
+         
+        </table>
     </nav>
+    
     <section id="introduction">
         <h2>Introduction</h2>
         <p>Exploring the need for image compression and the basic principles behind it.</p>
     </section>
     <section id="algorithms">
         <h2>Image Compression Algorithms</h2>
-        <article id="jpeg">
-            <h3>JPEG</h3>
-            <p>Details about the JPEG compression algorithm, including how it works and when it's best used.</p>
+        <article id="lossy">
+            <h3>Lossy</h3>
+            - Lossy compression significantly reduces file size by eliminating certain information. 
+                The algorithm detects some elements considered less important and can be removed from the image
+            <br>
+            <li>Advantage: 
+                Small file sizes. Ideal for web use. Lots of tools, plugins and software support it.
+                Fast to process</li>
+                
+            <li>Disadvantage：
+                Quality degrades due to higher rate of compression.</li>
+
+        
+                </p>
         </article>
-        <article id="png">
-            <h3>PNG</h3>
-            <p>Insights into the PNG compression technique, its benefits, and ideal use cases.</p>
+        <article id="Lossless">
+            <h3>Lossless</h3>
+            
+            - Lossless
+            Definition: Lossless compression allows perfect reconstruction from compressed data by exploiting statistical redundancy without losing any information.
+            
+             
+            <br>
+            <li>Advantage: 
+                Lossless compression preserves all original data which retains the quality of the file.</li>
+                
+            <li>Disadvantage：
+                Lossless compression has a lower compression ratio, meaning the compressed file size will be larger than lossy compression.
+            </li>
         </article>
         <!-- Add more algorithms as necessary -->
     </section>
@@ -44,7 +70,7 @@
             <h2>About Us</h2>
             <p>Information about the creators of the website and the purpose behind it.</p>
         </section>
-        <p>&copy; 2024 Image Compression Algorithms</p>
+        <p>&copy; 2024 chcohcohcohcho</p>
     </footer>
 </body>
 </html>

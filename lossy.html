@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lossy Image Compression Explained</title>
+    <link rel="stylesheet" href="homepage_style.css">
+</head>
+<body>
+    <header>
+        <h1>Understanding Lossy Image Compression</h1>
+    </header>
+    <nav>
+        <table>
+            <tr>
+                <th><a href="homepage_test.html">Introduction</a></th>
+                <th><a href="lossy.html">Lossy</a></th>
+                <th><a href="#comparisons">Comparisons</a></th>
+                <th><a href="#about">About Us</a></li></th>
+            </tr>
+         
+        </table>
+    </nav>    
+    <article id="color-conversion">
+        <h2>1. Color Image Conversion</h2>
+        <p> 
+            <li type="a">Because human eyes are more sensitive to  brightness than colour, compression on color is less affect original image content. this process is to separate the colors in the photos to luminance, blue chrominance and red chrominance instead of red, blue and green, therefore we can just make compression on blue chrominance and red chrominance.  </li>
+
+        <br>
+
+            <li type="a">	Calculate a new value for Y (luminance) , Cb(blue chrominance) and Cr(red chrominance) following this formula  
+            </li>
+         <br>
+            <div class="svg-container">
+                <img src="lossy cal.svg" alt="Color Conversion Diagram" class="responsive-svg">
+            </div>
+            <li type="a"> This process is reversible, and no data is removed </li>
+        </p>
+    </article>
+
+    <article id="chrominance-downsampling">
+        <h2>2. Chrominance Downsampling</h2>
+        <p>
+            <li type="a">Take Cb and Cr and divide component images into a 2x2 block of pixel </li>
+            <li type="a">	Calculate the average value for each block </li>
+            <li type="a">	Remove the repetitive information and shrink the image so each average value of 4 blocks can represent a single pixel. </li>
+            <li type="a">Significantly reduce the image size.</li>
+         </p>
+
+    </article>
+
+    <article id="dct">
+        <h2>3. Discrete Cosine Transformation (DCT)</h2>
+        <p>
+            <li type="a">Human eyes are not good at perceiving high frequencies elements </li>  <br>
+            <li type="a">	Divide the image into 8x8, each with 64 pixels,  valued from 0 – 256, represent the luminance, blue chrominance and red chrominance </li>  <br>
+            <li type="a">	Shift each value by subtracting 128</li>  <br>
+            <li type="a">	Combine the base images and time their coefficients to rebuild the similar image.</li>  <br>
+        </p>
+
+    </article>
+
+    <article id="quantization">
+        <h2>4. Quantization</h2>
+        <p> 
+            <li type="a">Divide each value using the quantization table corresponding to the position and round the result to the closest integer </li>  <br>
+            <li type="a">The quantization will have a higher number at the bottom right corner and a lower number at the top left corner</li>  <br>
+            <li type="a"> 
+                <div class="svg-container">
+                    <img src="Lossy4.svg" alt="Color Conversion Diagram" class="responsive-svg">
+                </div>
+            </li>
+        </p>
+
+    </article>
+    <article id="encoding">
+        <h2>5.	Run length and Huffman Encoding</h2>
+        <p>
+            <li type="a">List the number using a zig-zag pattern  </li>  <br>
+            <li type="a">Using ren length algorithm to list the data, if there are lots of duplicate, just state the number and the frequency instead of the list out all the data </li>  <br>
+            
+    <footer>
+        <p>&copy; 2024 Your Site Name</p>
+    </footer>
+</body>
+</html>

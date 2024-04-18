@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f0f8ff; 
+    color: #333; 
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #e6e6fa; 
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    color: #000080; 
+}
+
+header p {
+    font-style: italic;
+    color: #505050; 
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #e0ffff; 
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav li {
+    list-style: none;
+    padding: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000080; 
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+h2, h3 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+article {
+    background-color: #ffffff; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f8ff; 
+    border-top: 2px solid #ccc;
+}
+
+footer p {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav li {
+        padding: 10px;
+    }
+}
+
+.svg-container {
+    max-width: 75%; /* ensures the container fits in the parent */
+    height: auto; /* ensures the container's height adjusts to the SVG */
+}
+
+.responsive-svg {
+    width: 100%; /* scales the SVG to the container's width */
+    height: auto; /* scales the height proportionally */
+    display: block; /* removes extra space below the image */
+}
