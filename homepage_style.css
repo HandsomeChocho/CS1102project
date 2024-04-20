@@ -5,13 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f0f8ff; 
-    color: #333; 
-    line-height: 1.6;
-    padding: 20px;
-}
+
 
 header {
     background-color: #e6e6fa; 
@@ -29,28 +23,42 @@ header p {
     font-style: italic;
     color: #505050; 
 }
-
-nav {
-    display: flex;
-    justify-content: center;
-    background: #e0ffff; 
-    padding: 10px 0;
-    margin-bottom: 20px;
+.nav-wrapper {
+    width: 100%; /* Set the width of the navigation bar to 80% */
+    margin: auto; /* Center the wrapper within its container */
 }
 
-nav li {
-    list-style: none;
-    padding: 0 15px;
+nav {
+    display: flex; /* Use flexbox to layout the links */
+    justify-content: space-between; /* This will distribute items evenly across the available space */
+    align-items: center; /* This will vertically align items in the middle */
+    padding: 10px 0; /* Add some padding on top and bottom */
+    background-color: #e6e6fa; /* Example background color */
+}
+
+nav {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    background-color: #e0ffff; 
+    padding: 10px 0; 
 }
 
 nav a {
-    text-decoration: none;
+    text-decoration: none; 
     color: #000080; 
     font-weight: bold;
+    padding: 10px 20px; 
 }
 
-nav a:hover {
-    text-decoration: underline;
+
+nav table {
+    width: 100%;
+    table-layout: fixed; 
+}
+
+nav th {
+    text-align: center; 
 }
 
 section {
@@ -101,3 +109,51 @@ footer p {
     height: auto; /* scales the height proportionally */
     display: block; /* removes extra space below the image */
 }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #e9ecef;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+section {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #007bff;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+strong {
+    color: #212529;
+}
+
+footer {
+    background: #e9ecef;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #495057;
+}
+``

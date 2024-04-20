@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lossless Compression Techniques</title>
+    <link rel="stylesheet" href="homepage_style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Lossless Compression Techniques</h1>
+    </header>
+ <div class="nav-wrapper"></div>
+    <nav>
+        <table>
+            <tr>
+                <th><a href="homepage.html">Introduction</a></th>
+                <th><a href="lossy.html">Lossy</a></th>
+                <th><a href="lossless.html">Lossless</a></th>
+                <th><a href="php.php">Try Yourself</a></th>
+                <th><a href="About_US.html">About Us</a></li></th>
+            </tr>
+        </table>
+    </nav>
+</div>
+    <!-- Stage 1: Preprocessing -->
+    <section id="preprocessing">
+        <h2>Stage 1: Preprocessing</h2>
+        <p>Purpose: Increase data compressibility by utilizing contextual data.</p>
+        <h3>Techniques:</h3>
+        <ul>
+            <li><strong>Run-length Encoding:</strong> Simplifies sequences of repeated patterns into pairs indicating the count and the pattern itself (e.g., Input: "0000000011111000001111", RLE Output: (8, '0') (5, '1') (4, '0') (4, '1')).</li>
+            <li><strong>Frame Differencing (for video streams):</strong> Reduces redundancy by using the changes between frames, which frequently results in a large number of zeros that may be effectively compressed using run-length encoding.</li>
+        </ul>
+    </section>
+
+    <!-- Stage 2: Probability Model -->
+    <section id="probability-model">
+        <h2>Stage 2: Probability Model</h2>
+        <p>Purpose: Acts as the central component of lossless compression by specifying the encoding of input data patterns according to their frequency of prevalence.</p>
+        <div class="process">
+            <p><strong>Process:</strong></p>
+            <ol>
+                <li>Patterns occurring more frequently (high probability) are encoded with shorter codes.</li>
+                <li>Less frequent patterns (low probability) receive longer codes.</li>
+            </ol>
+            <p><strong>Outcome:</strong> If the input data aligns well with the probability model, more frequent use of shorter output patterns occurs, which leads to a smaller compressed output size.</p>
+        </div>
+    </section>
+
+    <!-- Stage 3: Probability Coding -->
+    <section id="probability-coding">
+        <h2>Stage 3: Probability Coding</h2>
+        <p>Purpose: Applying the defined probability model-based coding to the incoming data.</p>
+        <h3>Techniques:</h3>
+        <ul>
+            <li><strong>Huffman Coding:</strong> Optimal when all probabilities are powers of two, generating the shortest possible codes under such conditions.</li>
+            <li><strong>Arithmetic Coding:</strong> The whole message is encoded using intervals on the number line that correspond to the probabilities of symbol sequences, into a single number.</li>
+            <li><strong>Lempel-Ziv-Welch (LZW):</strong> Using a dictionary-based technique, sequences can be efficiently encoded as single output values.</li>
+            <li><strong>Lempel-Ziv 4 (LZ4):</strong> Offers a high speed for both compression and decompression, suitable for performance-critical applications.</li>
+            <li><strong>Zstandard (ZSTD):</strong> Developed by Facebook, this real-time compression algorithm provides high compression ratios and speed, widely supported by numerous platforms.</li>
+        </ul>
+    </section>
+<br>
+<br>
+<br>
+<h2> Reference</h2>
+    <article id="Reference">
+        <p><ol><li type=" 1" >https://www.researchgate.net/publication/350076882_Lossless_Compression_Techniques_for_Low_Bandwidth_Networks#pf3</p> </li> 
+        <li>https://compress-or-die.com/Understanding-PNG</li>
+        <li>https://www.techtarget.com/whatis/definition/lossless-and-lossy-compression</li>
+        </ol> 
+    <br>
+    <br>
+    </article>
+    <footer>
+        <p>&copy;2024 CS1102 Group 7</p>
+    </footer>
+
+</body>
+</html>
